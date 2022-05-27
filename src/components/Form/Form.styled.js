@@ -19,7 +19,7 @@ const StyledLabel = styled.label`
 `;
 
 const StyledInput = styled.input`
-  padding: 12px 16px;
+  padding: 8px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   //   border-radius: 4px;
   font: inherit;

@@ -9,7 +9,7 @@ const ContactList = styled.ul`
 const ContactListItem = styled.li`
   display: flex;
   align-items: center;
-  padding: 5px;
+  padding: 8px 16px;
   border: 1px solid lightgray;
   //   border-radius: 4px;
   margin-bottom: 8px;
