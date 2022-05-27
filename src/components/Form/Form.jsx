@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import {
+  StyledForm,
+  StyledLabel,
+  StyledInput,
+  StyledButton,
+} from './Form.styled';
 
 const INITIAL_STATE = {
   name: '',
@@ -26,10 +32,10 @@ class Form extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
+      <StyledForm onSubmit={this.handleSubmit}>
+        <StyledLabel>
           Name
-          <input
+          <StyledInput
             type="text"
             name="name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -37,10 +43,10 @@ class Form extends Component {
             onChange={this.handlerChange}
             required
           />
-        </label>
-        <label>
+        </StyledLabel>
+        <StyledLabel>
           Number
-          <input
+          <StyledInput
             type="tel"
             name="number"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -48,15 +54,15 @@ class Form extends Component {
             required
             onChange={this.handlerChange}
           />
-        </label>
-        <button type="submit">Add contact</button>
-      </form>
+        </StyledLabel>
+        <StyledButton type="submit">Add contact</StyledButton>
+      </StyledForm>
     );
   }
 }
 
-// Form.propTypes = {
-//     onSubmit: PropTypes.func.isRequired
-// }
+Form.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
 
 export default Form;
